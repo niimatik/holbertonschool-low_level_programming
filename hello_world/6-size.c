@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/**
+ *main-Entry point of the program
+ *
+ *This program prints "Programming is like building a multilingual puzzle",
+ *followed by a new line.
+ *
+ *Return:Always 0 (success)
+ */
+
 int main(void)
 {
 	printf("Size of a char: %zu byte(s)\n", sizeof(char));
@@ -7,5 +16,5 @@ int main(void)
 	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
 	printf("Size of a float: %zu byte(s)\n", sizeof(float));
-	return (0)
+	return (0);
 }
