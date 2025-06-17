@@ -21,19 +21,18 @@ int main(void)
 	u = n % 10;
 
 	printf("Last digit of %d is %d", n, u);
-
-    if (u > 5)
-    {
-        printf(" and is greater than 5");
-    }
-    else if (u == 0)
-    {
-        printf(" and is 0");
-    }
-    else
-    {
-        printf(" and is less than 6 and not 0");
-    }
-    printf("\n");
+	if (u > 5)
+	{
+		printf("and is greater than 5");
+	}
+	else if (u == 0)
+	{
+		printf("and is 0");
+	}
+	else
+	{
+		printf("and is less than 6 and not 0");
+	}
+	printf("\n");
 	return (0);
 }
