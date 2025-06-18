@@ -2,15 +2,17 @@
 #include <stdio.h>
 
 /**
- *main-Entry point of the program
+ * print_alphabet - Prints the lowercase alphabet followed by a new line
  *
- *Return:Always 0 (success)
+ * Description: This function uses _putchar to print each lowercase letter
+ * of the English alphabet, from 'a' to 'z', followed by a newline.
  */
+
 void print_alphabet(void)
 {
-    char c;
+	char c;
 
-    for (c = 'a'; c <= 'z'; c++)
-        _putchar(c);
-    _putchar('\n');
+	for (c = 'a'; c <= 'z'; c++)
+		_putchar(c);
+	_putchar('\n');
 }
