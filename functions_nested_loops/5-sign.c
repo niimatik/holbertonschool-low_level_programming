@@ -2,9 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_sign display sign of n
+ * print_sign - Prints the sign of a number.
+ * @n: The number to check.
  *
- * Return: 1 if greater than 0 -1 if lower 0 if equal
+ * Return: 1 if n is greater than 0,
+ *         0 if n is 0,
+ *        -1 if n is less than 0.
  */
 
 int print_sign(int n)
