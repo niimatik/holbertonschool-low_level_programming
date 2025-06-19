@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
+ * print_sign display sign of n
  *
- *
+ * Return: 1 if greater than 0 -1 if lower 0 if equal
  */
 
 int print_sign(int n)
