@@ -1,0 +1,15 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ *
+ *
+ *
+ *
+ */
+
+int add(int c, int d)
+{
+	e = c +d;
+	return (e);
+}
