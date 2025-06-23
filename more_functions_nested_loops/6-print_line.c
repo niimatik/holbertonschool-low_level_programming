@@ -2,8 +2,10 @@
 #include <stdio.h>
 
 /**
- * Print_line print an _
- *@n the number of time to print _
+ * print_line - Draws a straight line in the terminal
+ * @n: Number of times the character '_' should be printed
+ *
+ * Return: void
  */
 
 void print_line(int n)
