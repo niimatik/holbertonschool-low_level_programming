@@ -23,12 +23,8 @@ char *leet(char *s)
 			if (s[a] == ltr[b] || s[a] == (ltr[b] + 32))
 			{
 				s[a] = cfr[b];
-				b++;
 			}
-			else
-			{
-				b++;
-			}
+			b++;
 		}
 		a++;
 	}
