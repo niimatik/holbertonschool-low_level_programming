@@ -8,7 +8,6 @@
  *
  * Return: vlr
  */
-
 int _strcmp(char *s1, char *s2)
 {
 	int vlr = 0;
@@ -26,7 +25,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		b++;
 	}
-
 	if (a <= b)
 	{
 		lng = a;
@@ -35,7 +33,6 @@ int _strcmp(char *s1, char *s2)
 	{
 		lng = b;
 	}
-
 	while (c <= lng)
 	{
 		if (s1[c] == s2[c])
@@ -48,9 +45,7 @@ int _strcmp(char *s1, char *s2)
 			vlr = s1[c] - s2[c];
 			break;
 		}
-
 		c++;
 	}
-
 	return (vlr);
 }
