@@ -1,7 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
-
+/**
+ * reverse_array - reverse an array
+ *@a: array to return
+ *@n: number of element in the array
+ *
+ * Return: void
+ */
 
 void reverse_array(int *a, int n)
 {
