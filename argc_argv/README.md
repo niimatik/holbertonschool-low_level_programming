@@ -1,0 +1,1 @@
+in this folder i will learn how to use argc and argv
