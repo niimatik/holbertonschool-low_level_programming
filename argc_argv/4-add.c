@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 /**
  * main - add positive number
@@ -11,13 +13,31 @@
 
 int main(int argc, char *argv[])
 {
-	int n = 0, a;
+	int sum = 0, a;
+	char *b;
+	unsigned c;
 
-	for (a = 1; a < argc; a++)
+	if (argc > 1)
 	{
-		if (argv[a] >= 9 || argv[a] <= 0)
-		n += atoi(argv[a])
+		for (a = 1; a < argc; a++)
+		{
+			b = argv[a];
+
+			for (c = 0; c < strlen(b); c++)
+			{
+				if (b[c] < 48 || b[c] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(b);
+		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", n)
+	else
+	{
+		printf("0\n");
+	}
 	return (0);
 }
