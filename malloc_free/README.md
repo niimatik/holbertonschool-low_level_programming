@@ -1,0 +1,1 @@
+this folder is about learning the commande malloc and free
