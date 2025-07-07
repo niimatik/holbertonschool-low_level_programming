@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * print_grid - prints a grid of integers
+ * alloc_grid - return a pointer to a grid
  * @width: width of the grid
  * @height: height of the grid
  *
@@ -23,12 +23,12 @@ int **alloc_grid(int width, int height)
 	if (e == NULL)
 	{
 		free(e);
-		return(NULL);
+		return (NULL);
 	}
 
 	for (a = 0; a < height; a++)
 	{
-		e[a] = malloc(sizeof(int *) * width);
+		e[a] = malloc(sizeof(int) * width);
 
 		if (e[a] == NULL)
 		{
@@ -48,5 +48,5 @@ int **alloc_grid(int width, int height)
 			e[b][c] = 0;
 		}
 	}
-	return(e);
+	return (e);
 }
