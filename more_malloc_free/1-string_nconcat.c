@@ -2,7 +2,14 @@
 #include <stdio.h>
 #include "main.h"
 
-
+/**
+ * string_nconcat - concaternat two string
+ * @s1: first string to add
+ * @s2: seconde string to add
+ * @n: number of bytes to add
+ *
+ * Return: c
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
