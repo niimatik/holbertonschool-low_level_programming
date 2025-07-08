@@ -8,7 +8,7 @@
  * @owner: nom du propriétaire du chien
  *
  * Description : Cette structure est utilisée pour stocker les informations
- * de base sur un chien, notamment son nom, son âge et le nom du propriétaire.
+ * de base sur un chien, son nom, son âge et le nom du propriétaire.
  */
 
 struct dog
