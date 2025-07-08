@@ -45,9 +45,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			c[d] = s1[d];
 
 		if (d >= a)
+		{
 			c[d] = s2[b];
 			b++;
-
+		}
 		d++;
 	}
 	c[d] = '\0';
