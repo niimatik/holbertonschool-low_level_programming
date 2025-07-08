@@ -2,7 +2,13 @@
 #include <stdio.h>
 #include "main.h"
 
-
+/**
+ * array_range - creat an array of integer
+ * @min: minimum value of integer
+ * @max: maximun value of integer
+ *
+ * Return: b
+ */
 
 int *array_range(int min, int max)
 {
