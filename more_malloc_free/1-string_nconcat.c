@@ -10,6 +10,7 @@
  *
  * Return: c
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int a = 0, d = 0, l = 0;
@@ -33,6 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	l = a + n;
 	c = malloc((sizeof(char) * l) + 1);
+
 	if (c == NULL)
 		return (NULL);
 
