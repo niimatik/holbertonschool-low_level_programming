@@ -12,11 +12,13 @@
 int op_add(int a, int b)
 {
 	int c = 0;
+
 	c = a + b;
 	return (c);
 }
+
 /**
- * op_add - subtract two integer
+ * op_sub - subtract two integer
  * @a: first integer
  * @b: seconde integer
  *
@@ -26,11 +28,13 @@ int op_add(int a, int b)
 int op_sub(int a, int b)
 {
 	int c = 0;
+
 	c = a - b;
 	return (c);
 }
+
 /**
- * op_add - multiply two integer
+ * op_mul - multiply two integer
  * @a: first integer
  * @b: seconde integer
  *
@@ -40,11 +44,13 @@ int op_sub(int a, int b)
 int op_mul(int a, int b)
 {
 	int c = 0;
+
 	c = a * b;
 	return (c);
 }
+
 /**
- * op_add - divide two integer
+ * op_div - divide two integer
  * @a: first integer
  * @b: seconde integer
  *
@@ -54,11 +60,13 @@ int op_mul(int a, int b)
 int op_div(int a, int b)
 {
 	int c = 0;
+
 	c = a / b;
 	return (c);
 }
+
 /**
- * op_add - modulo two integer
+ * op_mod - modulo two integer
  * @a: first integer
  * @b: seconde integer
  *
@@ -68,6 +76,7 @@ int op_div(int a, int b)
 int op_mod(int a, int b)
 {
 	int c = 0;
+
 	c = a % b;
 	return (c);
 }
