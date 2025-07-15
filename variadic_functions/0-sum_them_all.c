@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-
+/**
+ * sum_them_all - add numbers
+ * @n: number of int to add
+ *
+ * Return: sum
+ */
 
 int sum_them_all(const unsigned int n, ...)
 {
