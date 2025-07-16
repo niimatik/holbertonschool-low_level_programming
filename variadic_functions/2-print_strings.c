@@ -2,13 +2,19 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-
+/**
+ * print_strings - print a string
+ * @separator: string to print between string
+ * @n: number of string
+ *
+ * Return: void
+ */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int a = 0;
-	char* string;
+	char *string;
 
 	if (n > 0)
 	{
