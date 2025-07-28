@@ -42,7 +42,6 @@ int _strlen(const char *s)
 
 	while (s[a])
 	{
-		s++;
 		a++;
 	}
 	return (a);
