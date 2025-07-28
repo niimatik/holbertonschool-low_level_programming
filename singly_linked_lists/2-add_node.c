@@ -21,6 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 		added->str = strdup(str);
 		added->len = _strlen(str);
 		added->next = *head;
+
 		*head = added;
 
 		return (added);
@@ -39,7 +40,7 @@ int _strlen(const char *s)
 {
 	int a = 0;
 
-	while (s)
+	while (s[a])
 	{
 		s++;
 		a++;
