@@ -1,0 +1,1 @@
+this file containe task about the data structure and singly linked lists
