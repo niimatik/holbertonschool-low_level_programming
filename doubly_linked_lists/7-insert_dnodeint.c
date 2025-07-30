@@ -11,8 +11,8 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *added = NULL, *current = *h, *lenght = *h;
-	unsigned int i = 0, len = 0;
+	dlistint_t *added = NULL, *current = *h;
+	unsigned int i = 0, length = 0;
 
 	if (*h == NULL)
 		return (NULL);
@@ -20,19 +20,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (*h == NULL && idx == 0)
 		return (add_dnodeint(h, n));
 
+	length = dlistint_len(*h);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	while (lenght->next != NULL)
-	{
-		len++;
-		lenght = lenght->next;
-	}
-	if (idx == len)
-	{
-		added = add_dnodeint_end(h, n);
-		return (added);
-	}
+	else if (length == idx)
+		return (add_dnodeint_end(h, n));
 
 	current = *h;
 	while (current != NULL)
@@ -72,4 +65,23 @@ dlistint_t *creat_node(unsigned int n, void *next, void *prev)
 	added->next = next;
 	added->prev = prev;
 	return (added);
+}
+
+/**
+  * dlistint_len - Counts the number of elements in a doubly linked list
+  * @h: The double linked list to count
+  *
+  * Return: Number of elements in the doubly linked list
+  */
+size_t dlistint_len(const dlistint_t *h)
+{
+	int lenght = 0;
+
+	while (h != NULL)
+	{
+		++lenght;
+		h = h->next;
+	}
+
+	return (lenght);
 }
