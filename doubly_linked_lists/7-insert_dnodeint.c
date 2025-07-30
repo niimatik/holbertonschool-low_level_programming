@@ -11,10 +11,10 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *added = NULL, *current = *h;
+	dlistint_t *current = NULL, *added = NULL;
 	unsigned int i = 0, length = 0;
 
-	if (*h == NULL)
+	if (h == NULL)
 		return (NULL);
 
 	if (*h == NULL && idx == 0)
@@ -32,39 +32,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (i == idx)
 		{
-			added = creat_node(n, current, current->prev);
+			added = create_node(n, current, current->prev);
 			current->prev = added;
 			current = added;
 			current->prev->next = added;
 			return (added);
 		}
+
 		current = current->next;
-		i++;
+		++i;
 	}
+
 	return (current);
-}
-
-/**
- * creat_node - create a node
- * @n: the node to create
- * @next: the next node
- * @prev: the previous node
- *
- * Return: the node created
- */
-
-dlistint_t *creat_node(unsigned int n, void *next, void *prev)
-{
-	dlistint_t *added = NULL;
-
-	added = malloc(sizeof(dlistint_t));
-	if (added == NULL)
-		return (NULL);
-
-	added->n = n;
-	added->next = next;
-	added->prev = prev;
-	return (added);
 }
 
 /**
@@ -84,4 +63,26 @@ size_t dlistint_len(const dlistint_t *h)
 	}
 
 	return (lenght);
+}
+
+/**
+  * create_node - Create a new node with values
+  * @n: The number of the new node
+  * @next: The next node of the new node
+  * @prev: The previous node of the new node
+  *
+  * Return: The address of the new node created
+  */
+dlistint_t *create_node(unsigned int n, void *next, void *prev)
+{
+	dlistint_t *added = NULL;
+
+	added = malloc(sizeof(dlistint_t));
+	if (added == NULL)
+		return (NULL);
+
+	added->n = n;
+	added->next = next;
+	added->prev = prev;
+	return (added);
 }
