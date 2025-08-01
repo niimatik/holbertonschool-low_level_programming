@@ -55,12 +55,12 @@ void copy_file(const char *src, const char *dest)
 	}
 	if (close(srcfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", srcfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", srcfd);
 		exit(100);
 	}
 	if (close(destfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", destfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destfd);
 		exit(100);
 	}
 }
