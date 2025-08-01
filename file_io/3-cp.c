@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 void copy_file(const char *src, const char *dest)
 {
 	int srcfd, destfd, readed;
-	char buf[1024];
+	char buff[1024];
 
 	srcfd = open(src, O_RDONLY);
 	if (!src || srcfd == -1)
@@ -40,9 +40,9 @@ void copy_file(const char *src, const char *dest)
 	}
 
 	destfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((readed = read(srcfd, buf, 1024)) > 0)
+	while ((readed = read(srcfd, buff, 1024)) > 0)
 	{
-		if (write(destfd, buf, readed) != readed || destfd == -1)
+		if (write(destfd, buff, readed) != readed || destfd == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
