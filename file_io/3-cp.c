@@ -40,11 +40,11 @@ void copy_file(const char *src, const char *dest)
 	}
 
 	destfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (readed = read(srcfd, buf, 1064) > 0)
+	while ((readed = read(srcfd, buf, 1064)) > 0)
 	{
 		if (write(destfd, buf, readed) != readed || destfd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", destfd);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", dest);
 			exit(99);
 		}
 	}
@@ -55,12 +55,12 @@ void copy_file(const char *src, const char *dest)
 	}
 	if (close(srcfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s", srcfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", srcfd);
 		exit(100);
 	}
 	if (close(destfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s", destfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", destfd);
 		exit(100);
 	}
 }
