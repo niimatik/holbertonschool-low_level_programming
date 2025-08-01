@@ -1,0 +1,1 @@
+that file is about input and output and systeme call
