@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 void copy_file(const char *src, const char *dest)
 {
 	int srcfd, destfd, readed;
-	char buf[1064];
+	char buf[1024];
 
 	srcfd = open(src, O_RDONLY);
 	if (!src || srcfd == -1)
@@ -40,27 +40,27 @@ void copy_file(const char *src, const char *dest)
 	}
 
 	destfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((readed = read(srcfd, buf, 1064)) > 0)
+	while ((readed = read(srcfd, buf, 1024)) > 0)
 	{
 		if (write(destfd, buf, readed) != readed || destfd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", dest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
 		}
 	}
 	if (readed == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 	if (close(srcfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i", srcfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", srcfd);
 		exit(100);
 	}
 	if (close(destfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i", destfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", destfd);
 		exit(100);
 	}
 }
